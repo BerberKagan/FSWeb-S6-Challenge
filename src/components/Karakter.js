@@ -12,19 +12,19 @@ const Karakter = () => {
   const [useData, setUseData] = useState([]);
   const [open, setOpen] = useState("0");
 
-  const toggle = (id) => {
-    if (open === id) {
+  const setToggle = (feature) => {
+    if (open === feature) {
       setOpen();
     } else {
-      setOpen(id);
+      setOpen(feature);
     }
   };
 
   useEffect(() => {
     axios
       .get("https://swapi.dev/api/people/?page=")
-      .then((response) => {
-        setUseData(response.data.results);
+      .then((res) => {
+        setUseData(res.data.results);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -32,7 +32,7 @@ const Karakter = () => {
   return (
     <div className="Accordion">
 
-      <Accordion open={open} toggle={toggle}>
+      <Accordion open={open} toggle={setToggle}>
         {useData
           .map((item, index) => (
             <AccordionItem>
