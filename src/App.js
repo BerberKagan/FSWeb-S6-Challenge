@@ -1,6 +1,8 @@
 import React from 'react';
+import Karakter from './components/Karakter';
 
 const App = () => {
+  
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -10,7 +12,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">Karakterler</h1>
+      <h1 className="Header">Characters</h1>
+      <Karakter/>
     </div>
   );
 }

@@ -66,6 +66,21 @@ Gerekli şeyleri bitirdikten sonra çalışmanızı daha da ileri götürebilirs
 ## Esnek Mülakat Soruları
 
 1. React JS nedir ve hangi sorunları çözer? Yanıtınızı sınıfta tanıtılan kavramlarla ve web'deki kişisel araştırmanızla destekleyin.
+
+React kullanıcı arayüzü oluşturmaya yarayan açık kaynak kodlu bir javascript kütüphanesidir. Facebook önderliğinde bir geliştirici grubu tarafından geliştirilmekte olan React, Model-View-Controller prensibine uygun olarak oluşturulmuştur. 
+
 1. Bileşen statelerini tanımlayın.
+
+State; bileşen hakkında veri veya bilgi içermek için kullanılan yerleşik bir React nesnesidir. Bir bileşenin durumu zamanla değişebilir. Her değiştiğinde bileşen yeniden işlenir.
+
 1. Propları açıklayın.
+
+Props terimi, bir nesnenin özelliklerini ifade eden özellikler anlamına gelir. Bunun nedeni, React içerisinde oluşturulan tüm öğelerin JavaScript nesneleri olmasıdır. Sonuç olarak, bir bileşene veri aktarımı, nesne için özellikler ve değerler yaratılarak yapılır.
+
 1. Side effektler nelerdir ve bir React bileşenindeki efektleri belirli state veya prop değişiklikleriyle nasıl senkronize edersiniz?
+
+Side effect, yürütülen function scope dışındaki bir şeyi etkileyen herhangi bir şeydir. Bir API'den veri almak, timer’lar, log kayıtları ve DOM'u manuel olarak manipüle etmek side effect’lere örnektir. Effect hook’ta ikinci argüman olarak bir bağımlılık dizisi kullanıp, effect’in hangi state veya props ile senkronize edilmesi gerektiğini söyleyebiliriz. Aşağıda açıklayıcı bir kılavuz paylaşıyorum: 
+
+*useEffect(fn); // all state and props,
+*useEffect(fn, []); // no state or props,
+*useEffect(fn, [these, states, props]);
